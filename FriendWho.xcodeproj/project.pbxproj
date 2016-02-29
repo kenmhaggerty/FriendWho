@@ -11,7 +11,6 @@
 		725B0CFE8576C672B3B87F19 /* libPods-FriendWhoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A083CCBF58B4C623328BD1 /* libPods-FriendWhoUITests.a */; };
 		7D136AB71C84A69100279D15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB61C84A69100279D15 /* main.m */; };
 		7D136ABA1C84A69100279D15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB91C84A69100279D15 /* AppDelegate.m */; };
-		7D136ABD1C84A69100279D15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136ABC1C84A69100279D15 /* ViewController.m */; };
 		7D136AC01C84A69100279D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D136ABE1C84A69100279D15 /* Main.storyboard */; };
 		7D136AC31C84A69100279D15 /* FriendWho.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AC11C84A69100279D15 /* FriendWho.xcdatamodeld */; };
 		7D136AC51C84A69100279D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D136AC41C84A69100279D15 /* Assets.xcassets */; };
@@ -45,8 +44,6 @@
 		7D136AB61C84A69100279D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D136AB81C84A69100279D15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D136AB91C84A69100279D15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7D136ABB1C84A69100279D15 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7D136ABC1C84A69100279D15 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7D136ABF1C84A69100279D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D136AC21C84A69100279D15 /* FriendWho.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FriendWho.xcdatamodel; sourceTree = "<group>"; };
 		7D136AC41C84A69100279D15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,13 +142,9 @@
 			children = (
 				7D136AB81C84A69100279D15 /* AppDelegate.h */,
 				7D136AB91C84A69100279D15 /* AppDelegate.m */,
-				7D136ABB1C84A69100279D15 /* ViewController.h */,
-				7D136ABC1C84A69100279D15 /* ViewController.m */,
-				7D136ABE1C84A69100279D15 /* Main.storyboard */,
 				7D136AC41C84A69100279D15 /* Assets.xcassets */,
-				7D136AC61C84A69100279D15 /* LaunchScreen.storyboard */,
-				7D136AC91C84A69100279D15 /* Info.plist */,
-				7D136AC11C84A69100279D15 /* FriendWho.xcdatamodeld */,
+				7D136AEB1C84A7BC00279D15 /* Storyboards */,
+				7D136AED1C84A7DA00279D15 /* Data Managers */,
 				7D136AB51C84A69100279D15 /* Supporting Files */,
 			);
 			path = FriendWho;
@@ -160,9 +153,10 @@
 		7D136AB51C84A69100279D15 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7D136AC91C84A69100279D15 /* Info.plist */,
 				7D136AB61C84A69100279D15 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		7D136AD11C84A69100279D15 /* FriendWhoTests */ = {
@@ -181,6 +175,31 @@
 				7D136ADF1C84A69100279D15 /* Info.plist */,
 			);
 			path = FriendWhoUITests;
+			sourceTree = "<group>";
+		};
+		7D136AEB1C84A7BC00279D15 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7D136AC61C84A69100279D15 /* LaunchScreen.storyboard */,
+				7D136ABE1C84A69100279D15 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		7D136AEC1C84A7CE00279D15 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				7D136AC11C84A69100279D15 /* FriendWho.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		7D136AED1C84A7DA00279D15 /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7D136AEC1C84A7CE00279D15 /* Core Data */,
+			);
+			path = "Data Managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,7 +464,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D136AC31C84A69100279D15 /* FriendWho.xcdatamodeld in Sources */,
-				7D136ABD1C84A69100279D15 /* ViewController.m in Sources */,
 				7D136ABA1C84A69100279D15 /* AppDelegate.m in Sources */,
 				7D136AB71C84A69100279D15 /* main.m in Sources */,
 			);
