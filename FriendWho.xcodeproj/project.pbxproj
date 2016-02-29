@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262F98771319F108C18AD3C9 /* libPods-FriendWho.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2C37190E4997D754530A2D /* libPods-FriendWho.a */; };
+		725B0CFE8576C672B3B87F19 /* libPods-FriendWhoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A083CCBF58B4C623328BD1 /* libPods-FriendWhoUITests.a */; };
 		7D136AB71C84A69100279D15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB61C84A69100279D15 /* main.m */; };
 		7D136ABA1C84A69100279D15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB91C84A69100279D15 /* AppDelegate.m */; };
 		7D136ABD1C84A69100279D15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136ABC1C84A69100279D15 /* ViewController.m */; };
@@ -16,6 +18,7 @@
 		7D136AC81C84A69100279D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D136AC61C84A69100279D15 /* LaunchScreen.storyboard */; };
 		7D136AD31C84A69100279D15 /* FriendWhoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AD21C84A69100279D15 /* FriendWhoTests.m */; };
 		7D136ADE1C84A69100279D15 /* FriendWhoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136ADD1C84A69100279D15 /* FriendWhoUITests.m */; };
+		FED9F040F65274559D6F4F4D /* libPods-FriendWhoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D72BE3A48C3A981A7FCFCCEF /* libPods-FriendWhoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		336B51C60DF7DB81F9644AEF /* Pods-FriendWhoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendWhoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendWhoTests/Pods-FriendWhoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A76E1C4EFCF1BD736668E1C /* Pods-FriendWho.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendWho.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendWho/Pods-FriendWho.release.xcconfig"; sourceTree = "<group>"; };
 		7D136AB21C84A69100279D15 /* FriendWho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendWho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D136AB61C84A69100279D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D136AB81C84A69100279D15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +58,13 @@
 		7D136AD91C84A69100279D15 /* FriendWhoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendWhoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D136ADD1C84A69100279D15 /* FriendWhoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendWhoUITests.m; sourceTree = "<group>"; };
 		7D136ADF1C84A69100279D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A083CCBF58B4C623328BD1 /* libPods-FriendWhoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendWhoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4964CB9F46D55F6C38CB60 /* Pods-FriendWhoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendWhoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendWhoUITests/Pods-FriendWhoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B563616AB94D0EA7FF9CAF97 /* Pods-FriendWho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendWho.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendWho/Pods-FriendWho.debug.xcconfig"; sourceTree = "<group>"; };
+		C810D4297C4268D4474C1E8E /* Pods-FriendWhoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendWhoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendWhoTests/Pods-FriendWhoTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB2C37190E4997D754530A2D /* libPods-FriendWho.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendWho.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72BE3A48C3A981A7FCFCCEF /* libPods-FriendWhoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendWhoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2DACDAE8EBB70C0012CFF9E /* Pods-FriendWhoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendWhoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendWhoUITests/Pods-FriendWhoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262F98771319F108C18AD3C9 /* libPods-FriendWho.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED9F040F65274559D6F4F4D /* libPods-FriendWhoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				725B0CFE8576C672B3B87F19 /* libPods-FriendWhoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		368C628DD71247868FDBC722 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B563616AB94D0EA7FF9CAF97 /* Pods-FriendWho.debug.xcconfig */,
+				5A76E1C4EFCF1BD736668E1C /* Pods-FriendWho.release.xcconfig */,
+				336B51C60DF7DB81F9644AEF /* Pods-FriendWhoTests.debug.xcconfig */,
+				C810D4297C4268D4474C1E8E /* Pods-FriendWhoTests.release.xcconfig */,
+				AF4964CB9F46D55F6C38CB60 /* Pods-FriendWhoUITests.debug.xcconfig */,
+				F2DACDAE8EBB70C0012CFF9E /* Pods-FriendWhoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		77709D340C073154EB7347F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C37190E4997D754530A2D /* libPods-FriendWho.a */,
+				D72BE3A48C3A981A7FCFCCEF /* libPods-FriendWhoTests.a */,
+				A2A083CCBF58B4C623328BD1 /* libPods-FriendWhoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D136AA91C84A69100279D15 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +125,8 @@
 				7D136AD11C84A69100279D15 /* FriendWhoTests */,
 				7D136ADC1C84A69100279D15 /* FriendWhoUITests */,
 				7D136AB31C84A69100279D15 /* Products */,
+				368C628DD71247868FDBC722 /* Pods */,
+				77709D340C073154EB7347F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D136AE21C84A69100279D15 /* Build configuration list for PBXNativeTarget "FriendWho" */;
 			buildPhases = (
+				FCBD59FF857073EA33CCDC9F /* Check Pods Manifest.lock */,
 				7D136AAE1C84A69100279D15 /* Sources */,
 				7D136AAF1C84A69100279D15 /* Frameworks */,
 				7D136AB01C84A69100279D15 /* Resources */,
+				6B90C12C90791A939724132A /* Embed Pods Frameworks */,
+				D66CAEB710A0B502D52BA39C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D136AE51C84A69100279D15 /* Build configuration list for PBXNativeTarget "FriendWhoTests" */;
 			buildPhases = (
+				B85CAC19D234A542DEB38900 /* Check Pods Manifest.lock */,
 				7D136ACA1C84A69100279D15 /* Sources */,
 				7D136ACB1C84A69100279D15 /* Frameworks */,
 				7D136ACC1C84A69100279D15 /* Resources */,
+				31FAECE6C7472F1D05967E59 /* Embed Pods Frameworks */,
+				AE0D8EC8E9B6BC495B2BCF91 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D136AE81C84A69100279D15 /* Build configuration list for PBXNativeTarget "FriendWhoUITests" */;
 			buildPhases = (
+				421F344D40F7E02C165C6B9F /* Check Pods Manifest.lock */,
 				7D136AD51C84A69100279D15 /* Sources */,
 				7D136AD61C84A69100279D15 /* Frameworks */,
 				7D136AD71C84A69100279D15 /* Resources */,
+				6F232D0335FC23E22DEF15CA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +315,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31FAECE6C7472F1D05967E59 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendWhoTests/Pods-FriendWhoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		421F344D40F7E02C165C6B9F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6B90C12C90791A939724132A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendWho/Pods-FriendWho-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F232D0335FC23E22DEF15CA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendWhoUITests/Pods-FriendWhoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE0D8EC8E9B6BC495B2BCF91 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendWhoTests/Pods-FriendWhoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B85CAC19D234A542DEB38900 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D66CAEB710A0B502D52BA39C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendWho/Pods-FriendWho-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCBD59FF857073EA33CCDC9F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D136AAE1C84A69100279D15 /* Sources */ = {
@@ -413,6 +584,7 @@
 		};
 		7D136AE31C84A69100279D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B563616AB94D0EA7FF9CAF97 /* Pods-FriendWho.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FriendWho/Info.plist;
@@ -424,6 +596,7 @@
 		};
 		7D136AE41C84A69100279D15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A76E1C4EFCF1BD736668E1C /* Pods-FriendWho.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FriendWho/Info.plist;
@@ -435,6 +608,7 @@
 		};
 		7D136AE61C84A69100279D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 336B51C60DF7DB81F9644AEF /* Pods-FriendWhoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FriendWhoTests/Info.plist;
@@ -447,6 +621,7 @@
 		};
 		7D136AE71C84A69100279D15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C810D4297C4268D4474C1E8E /* Pods-FriendWhoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FriendWhoTests/Info.plist;
@@ -459,6 +634,7 @@
 		};
 		7D136AE91C84A69100279D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF4964CB9F46D55F6C38CB60 /* Pods-FriendWhoUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FriendWhoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -471,6 +647,7 @@
 		};
 		7D136AEA1C84A69100279D15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2DACDAE8EBB70C0012CFF9E /* Pods-FriendWhoUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FriendWhoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -500,6 +677,7 @@
 				7D136AE41C84A69100279D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D136AE51C84A69100279D15 /* Build configuration list for PBXNativeTarget "FriendWhoTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +686,7 @@
 				7D136AE71C84A69100279D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D136AE81C84A69100279D15 /* Build configuration list for PBXNativeTarget "FriendWhoUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +695,7 @@
 				7D136AEA1C84A69100279D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
