@@ -17,6 +17,7 @@
 		7D136AC81C84A69100279D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D136AC61C84A69100279D15 /* LaunchScreen.storyboard */; };
 		7D136AD31C84A69100279D15 /* FriendWhoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AD21C84A69100279D15 /* FriendWhoTests.m */; };
 		7D136ADE1C84A69100279D15 /* FriendWhoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136ADD1C84A69100279D15 /* FriendWhoUITests.m */; };
+		7D136AF01C84A89100279D15 /* FWPrivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AEF1C84A89100279D15 /* FWPrivateInfo.m */; };
 		FED9F040F65274559D6F4F4D /* libPods-FriendWhoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D72BE3A48C3A981A7FCFCCEF /* libPods-FriendWhoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		7D136AD91C84A69100279D15 /* FriendWhoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendWhoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D136ADD1C84A69100279D15 /* FriendWhoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendWhoUITests.m; sourceTree = "<group>"; };
 		7D136ADF1C84A69100279D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D136AEE1C84A89100279D15 /* FWPrivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWPrivateInfo.h; sourceTree = "<group>"; };
+		7D136AEF1C84A89100279D15 /* FWPrivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWPrivateInfo.m; sourceTree = "<group>"; };
 		A2A083CCBF58B4C623328BD1 /* libPods-FriendWhoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendWhoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4964CB9F46D55F6C38CB60 /* Pods-FriendWhoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendWhoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendWhoUITests/Pods-FriendWhoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B563616AB94D0EA7FF9CAF97 /* Pods-FriendWho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendWho.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendWho/Pods-FriendWho.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 			children = (
 				7D136AB81C84A69100279D15 /* AppDelegate.h */,
 				7D136AB91C84A69100279D15 /* AppDelegate.m */,
+				7D136AEE1C84A89100279D15 /* FWPrivateInfo.h */,
+				7D136AEF1C84A89100279D15 /* FWPrivateInfo.m */,
 				7D136AC41C84A69100279D15 /* Assets.xcassets */,
 				7D136AEB1C84A7BC00279D15 /* Storyboards */,
 				7D136AED1C84A7DA00279D15 /* Data Managers */,
@@ -465,6 +470,7 @@
 			files = (
 				7D136AC31C84A69100279D15 /* FriendWho.xcdatamodeld in Sources */,
 				7D136ABA1C84A69100279D15 /* AppDelegate.m in Sources */,
+				7D136AF01C84A89100279D15 /* FWPrivateInfo.m in Sources */,
 				7D136AB71C84A69100279D15 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
