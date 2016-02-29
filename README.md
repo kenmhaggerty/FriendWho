@@ -1,2 +1,2 @@
-# GuessWho
+# FriendWho
 Facebook game.
