@@ -10,6 +10,7 @@
 		262F98771319F108C18AD3C9 /* libPods-FriendWho.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2C37190E4997D754530A2D /* libPods-FriendWho.a */; };
 		725B0CFE8576C672B3B87F19 /* libPods-FriendWhoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A083CCBF58B4C623328BD1 /* libPods-FriendWhoUITests.a */; };
 		7D12CA701C84CD480021519B /* FWFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA6F1C84CD480021519B /* FWFacebookManager.m */; };
+		7D12CA761C84CDB60021519B /* NSObject+Basics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA751C84CDB60021519B /* NSObject+Basics.m */; };
 		7D12CA791C84D15C0021519B /* AKDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA781C84D15C0021519B /* AKDebugger.m */; };
 		7D12CA7D1C84D1770021519B /* AKDebuggerRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA7C1C84D1770021519B /* AKDebuggerRules.m */; };
 		7D12CA811C84D27D0021519B /* AKGenerics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA801C84D27D0021519B /* AKGenerics.m */; };
@@ -47,6 +48,8 @@
 		5A76E1C4EFCF1BD736668E1C /* Pods-FriendWho.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendWho.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendWho/Pods-FriendWho.release.xcconfig"; sourceTree = "<group>"; };
 		7D12CA6E1C84CD480021519B /* FWFacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWFacebookManager.h; path = FWFacebookManager/FWFacebookManager.h; sourceTree = "<group>"; };
 		7D12CA6F1C84CD480021519B /* FWFacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FWFacebookManager.m; path = FWFacebookManager/FWFacebookManager.m; sourceTree = "<group>"; };
+		7D12CA741C84CDB60021519B /* NSObject+Basics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Basics.h"; path = "../../../../Documents/PROGRAMMING/iOS/1_PROJECTS/NSObject+Basics/NSObject+Basics.h"; sourceTree = "<group>"; };
+		7D12CA751C84CDB60021519B /* NSObject+Basics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Basics.m"; path = "../../../../Documents/PROGRAMMING/iOS/1_PROJECTS/NSObject+Basics/NSObject+Basics.m"; sourceTree = "<group>"; };
 		7D12CA771C84D15C0021519B /* AKDebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKDebugger.h; path = ../../../../Documents/PROGRAMMING/iOS/1_PROJECTS/AKDebugger/AKDebugger.h; sourceTree = "<group>"; };
 		7D12CA781C84D15C0021519B /* AKDebugger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKDebugger.m; path = ../../../../Documents/PROGRAMMING/iOS/1_PROJECTS/AKDebugger/AKDebugger.m; sourceTree = "<group>"; };
 		7D12CA7B1C84D1770021519B /* AKDebuggerRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKDebuggerRules.h; sourceTree = "<group>"; };
@@ -144,8 +147,18 @@
 			children = (
 				7D12CA7A1C84D1610021519B /* AKDebugger */,
 				7D12CA821C84D2810021519B /* AKGenerics */,
+				7D12CA731C84CD980021519B /* NSObject+Basics */,
 			);
 			name = IMPORTS;
+			sourceTree = "<group>";
+		};
+		7D12CA731C84CD980021519B /* NSObject+Basics */ = {
+			isa = PBXGroup;
+			children = (
+				7D12CA741C84CDB60021519B /* NSObject+Basics.h */,
+				7D12CA751C84CDB60021519B /* NSObject+Basics.m */,
+			);
+			name = "NSObject+Basics";
 			sourceTree = "<group>";
 		};
 		7D12CA7A1C84D1610021519B /* AKDebugger */ = {
@@ -535,6 +548,7 @@
 				7D136AF01C84A89100279D15 /* FWPrivateInfo.m in Sources */,
 				7D12CA791C84D15C0021519B /* AKDebugger.m in Sources */,
 				7D136AB71C84A69100279D15 /* main.m in Sources */,
+				7D12CA761C84CDB60021519B /* NSObject+Basics.m in Sources */,
 				7D12CA701C84CD480021519B /* FWFacebookManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
