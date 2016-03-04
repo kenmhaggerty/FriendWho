@@ -48,6 +48,11 @@ NSString * const FacebookAPIUserKeyID = @"id";
 NSString * const FacebookAPIUserKeyName = @"name";
 
 @interface FWFacebookManager ()
+
+// GENERAL //
+
++ (instancetype)sharedManager;
+
 @end
 
 @implementation FWFacebookManager
@@ -121,6 +126,19 @@ NSString * const FacebookAPIUserKeyName = @"name";
     [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_DATA, AKD_ACCOUNTS] message:nil];
     
     [super teardown];
+}
+
+#pragma mark - // PRIVATE METHODS (General) //
+
++ (instancetype)sharedManager {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter tags:@[AKD_ACCOUNTS] message:nil];
+    
+    static FWFacebookManager *sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedManager = [[FWFacebookManager alloc] init];
+    });
+    return sharedManager;
 }
 
 
