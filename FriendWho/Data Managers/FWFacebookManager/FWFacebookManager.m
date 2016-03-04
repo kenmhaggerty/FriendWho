@@ -169,7 +169,7 @@ NSString * const FacebookAPINotificationKeyNewProfile = @"FBSDKProfileNew";
         
         
         NSArray *parameters = @[@"id", @"first_name", @"last_name", @"hometown", @"name", @"education", @"likes", @"permissions", @"friends"];
-        FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"/{user-id}/friends" parameters:@{FacebookAPIGraphRequestKey : [parameters componentsJoinedByString:@", "]} HTTPMethod:@"GET"];
+        FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"/me/friends" parameters:@{FacebookAPIGraphRequestKey : [parameters componentsJoinedByString:@", "]} HTTPMethod:@"GET"];
         [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
             
             if (error) {
