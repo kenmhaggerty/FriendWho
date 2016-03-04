@@ -47,6 +47,9 @@ NSString * const FacebookAPIPermissionEmployment = @"user_work_history";
 NSString * const FacebookAPIUserKeyID = @"id";
 NSString * const FacebookAPIUserKeyName = @"name";
 
+NSString * const FacebookAPIGraphRequestKey = @"fields";
+NSString * const FacebookAPINotificationKeyNewProfile = @"FBSDKProfileNew";
+
 @interface FWFacebookManager ()
 @property (nonatomic, strong) NSDictionary *currentUser;
 @property (nonatomic, strong) FBSDKProfile *currentProfile;
@@ -54,6 +57,7 @@ NSString * const FacebookAPIUserKeyName = @"name";
 // GENERAL //
 
 + (instancetype)sharedManager;
++ (void)checkForAccessTokenWithSuccess:(void (^)(void))successBlock failure:(void (^)(void))failureBlock;
 
 // RESPONDERS //
 
@@ -115,6 +119,69 @@ NSString * const FacebookAPIUserKeyName = @"name";
 //    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
 
+#pragma mark - // PUBLIC METHODS (Getter) //
+
++ (NSArray *)permissions {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter tags:@[AKD_FACEBOOK] message:nil];
+    
+    return @[FacebookAPIPermissionPublicProfile, FacebookAPIPermissionFriends, FacebookAPIPermissionAboutMe, FacebookAPIPermissionBooks, FacebookAPIPermissionFitness, FacebookAPIPermissionMusic, FacebookAPIPermissionNews, FacebookAPIPermissionWatchedVideos, FacebookAPIPermissionBirthday, FacebookAPIPermissionEducation, FacebookAPIPermissionEvents, FacebookAPIPermissionHometown, FacebookAPIPermissionLikes, FacebookAPIPermissionPhotos, FacebookAPIPermissionPosts, FacebookAPIPermissionRelationships, FacebookAPIPermissionRelationshipDetails, FacebookAPIPermissionReligionAndPolitics, FacebookAPIPermissionTaggedPlaces, FacebookAPIPermissionVideos, FacebookAPIPermissionEmployment];
+}
+
++ (NSDictionary *)currentUser {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter tags:@[AKD_ACCOUNTS, AKD_DATA] message:nil];
+    
+    return [FWFacebookManager sharedManager].currentUser;
+}
+
++ (void)fetchCurrentProfileWithCompletion:(void (^)(NSDictionary *))completionBlock {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter tags:@[AKD_ACCOUNTS] message:nil];
+    
+    FWFacebookManager *sharedManager = [FWFacebookManager sharedManager];
+    NSDictionary *currentUser = sharedManager.currentUser;
+    if (currentUser) {
+        completionBlock(currentUser);
+        return;
+    }
+    
+    [FWFacebookManager checkForAccessTokenWithSuccess:^{
+        
+        NSArray *parameters = @[@"id", @"first_name", @"last_name", @"hometown", @"name", @"education", @"likes", @"permissions", @"friends"];
+        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{FacebookAPIGraphRequestKey : [parameters componentsJoinedByString:@", "]}] startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+            
+            if (error) {
+                [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeError methodType:AKMethodTypeGetter tags:@[AKD_ACCOUNTS] message:[NSString stringWithFormat:@"%@, %@", error, error.userInfo]];
+            }
+            
+            sharedManager.currentUser = (NSDictionary *)result;
+            completionBlock(result);
+        }];
+        
+    } failure:^{
+        completionBlock(nil);
+    }];
+}
+
++ (void)fetchFriendsWithCompletion:(void (^)(NSDictionary *))completionBlock {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeGetter tags:@[AKD_DATA] message:nil];
+    
+    [FWFacebookManager checkForAccessTokenWithSuccess:^{
+        
+        
+        
+        NSArray *parameters = @[@"id", @"first_name", @"last_name", @"hometown", @"name", @"education", @"likes", @"permissions", @"friends"];
+        FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"/{user-id}/friends" parameters:@{FacebookAPIGraphRequestKey : [parameters componentsJoinedByString:@", "]} HTTPMethod:@"GET"];
+        [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+            
+            if (error) {
+                [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeError methodType:AKMethodTypeGetter tags:@[AKD_ACCOUNTS] message:[NSString stringWithFormat:@"%@, %@", error, error.userInfo]];
+            }
+            
+            completionBlock(result);
+        }];
+        
+    } failure:^{
+        completionBlock(nil);
+    }];
 }
 
 #pragma mark - // CATEGORY METHODS //
@@ -153,6 +220,34 @@ NSString * const FacebookAPIUserKeyName = @"name";
         sharedManager = [[FWFacebookManager alloc] init];
     });
     return sharedManager;
+}
+
++ (void)checkForAccessTokenWithSuccess:(void (^)(void))successBlock failure:(void (^)(void))failureBlock {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeValidator tags:@[AKD_ACCOUNTS] message:nil];
+    
+    FBSDKAccessToken *accessToken = [FBSDKAccessToken currentAccessToken];
+    if (!accessToken) {
+        failureBlock();
+        return;
+    }
+    
+    if ([accessToken.expirationDate timeIntervalSinceNow] < 0) {
+        [FBSDKAccessToken refreshCurrentAccessToken:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+            
+            if (error) {
+                [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeError methodType:AKMethodTypeGetter tags:@[AKD_ACCOUNTS] message:[NSString stringWithFormat:@"%@, %@", error, error.userInfo]];
+            }
+            
+            if (!result) {
+                failureBlock();
+                return;
+            }
+            
+            successBlock();
+        }];
+    }
+    
+    successBlock();
 }
 
 #pragma mark - // PRIVATE METHODS (Responders) //

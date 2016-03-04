@@ -56,4 +56,11 @@ extern NSString * const FacebookAPIUserKeyName;
 + (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 + (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 
+// GETTERS //
+
++ (NSArray *)permissions;
++ (NSDictionary *)currentUser;
++ (void)fetchCurrentProfileWithCompletion:(void (^)(NSDictionary *))completionBlock;
++ (void)fetchFriendsWithCompletion:(void (^)(NSDictionary *))completionBlock;
+
 @end
