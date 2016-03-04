@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "FWDateProtocols.h"
+#import "FWBirthdayProtocols.h"
 #import "FWEnrollmentProtocols.h"
 #import "FWEmploymentProtocols.h"
 #import "FWBookProtocols.h"
@@ -32,7 +32,7 @@
 - (NSString *)name;
 - (UIImage *)profilePhoto;
 - (NSString *)bio;
-- (id <FWDate>)birthday;
+- (id <FWBirthday>)birthday;
 - (NSSet <id <FWUser>> *)friends;
 - (NSSet <id <FWEnrollment>> *)education;
 - (NSSet <id <FWEmployment>> *)employment;

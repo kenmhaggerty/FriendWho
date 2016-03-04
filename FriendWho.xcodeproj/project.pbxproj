@@ -61,6 +61,7 @@
 		7D12CA851C84E8710021519B /* FWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWViewController.m; sourceTree = "<group>"; };
 		7D12CA8D1C89EE0D0021519B /* FWUserProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWUserProtocols.h; path = Protocols/FWUserProtocols.h; sourceTree = "<group>"; };
 		7D12CA8F1C89F41E0021519B /* FWPlaceProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWPlaceProtocols.h; path = Protocols/FWPlaceProtocols.h; sourceTree = "<group>"; };
+		7D12CA901C89F6930021519B /* FWBirthdayProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWBirthdayProtocols.h; path = Protocols/FWBirthdayProtocols.h; sourceTree = "<group>"; };
 		7D136AB21C84A69100279D15 /* FriendWho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendWho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D136AB61C84A69100279D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D136AB81C84A69100279D15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -206,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				7D12CA8D1C89EE0D0021519B /* FWUserProtocols.h */,
+				7D12CA901C89F6930021519B /* FWBirthdayProtocols.h */,
 				7D12CA8F1C89F41E0021519B /* FWPlaceProtocols.h */,
 			);
 			name = Protocols;
