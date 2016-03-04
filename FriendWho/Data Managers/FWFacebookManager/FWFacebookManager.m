@@ -48,10 +48,17 @@ NSString * const FacebookAPIUserKeyID = @"id";
 NSString * const FacebookAPIUserKeyName = @"name";
 
 @interface FWFacebookManager ()
+@property (nonatomic, strong) NSDictionary *currentUser;
+@property (nonatomic, strong) FBSDKProfile *currentProfile;
 
 // GENERAL //
 
 + (instancetype)sharedManager;
+
+// RESPONDERS //
+
+- (void)currentUserDidChange:(NSNotification *)notification;
+- (void)profileDidChange:(NSNotification *)notification;
 
 @end
 
@@ -120,12 +127,19 @@ NSString * const FacebookAPIUserKeyName = @"name";
     [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_DATA, AKD_ACCOUNTS] message:nil];
     
     [super setup];
+    
+    [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currentUserDidChange:) name:FBSDKAccessTokenDidChangeUserID object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profileDidChange:) name:FBSDKProfileDidChangeNotification object:nil];
 }
 
 - (void)teardown {
     [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_DATA, AKD_ACCOUNTS] message:nil];
     
     [super teardown];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:FBSDKAccessTokenDidChangeUserID object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:FBSDKProfileDidChangeNotification object:nil];
 }
 
 #pragma mark - // PRIVATE METHODS (General) //
@@ -141,5 +155,22 @@ NSString * const FacebookAPIUserKeyName = @"name";
     return sharedManager;
 }
 
+#pragma mark - // PRIVATE METHODS (Responders) //
+
+- (void)currentUserDidChange:(NSNotification *)notification {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeUnspecified tags:@[AKD_NOTIFICATION_CENTER, AKD_ACCOUNTS] message:nil];
+    
+    //
+}
+
+- (void)profileDidChange:(NSNotification *)notification {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeUnspecified tags:@[AKD_NOTIFICATION_CENTER, AKD_DATA] message:nil];
+    
+    self.currentProfile = notification.userInfo[FacebookAPINotificationKeyNewProfile];
+    if (!self.currentProfile) {
+        [FWFacebookManager sharedManager].currentUser = nil;
+        [FBSDKAccessToken setCurrentAccessToken:nil];
+    }
+}
 
 @end
