@@ -18,10 +18,7 @@
 #import "FWEmploymentProtocols.h"
 #import "FWBookProtocols.h"
 #import "FWMusicProtocols.h"
-#import "FWLikeProtocols.h"
 #import "FWRelationshipProtocols.h"
-#import "FWReligionProtocols.h"
-#import "FWPoliticsProtocols.h"
 #import "FWPlaceProtocols.h"
 
 #pragma mark - // DEFINITIONS //
@@ -39,10 +36,10 @@
 - (NSSet <id <FWEmployment>> *)employment;
 - (NSSet <id <FWBook>> *)favoriteBooks;
 - (NSSet <id <FWMusic>> *)favoriteMusic;
-- (NSSet <id <FWLike>> *)likes;
+- (NSSet <NSString *> *)likes;
 - (NSSet <id <FWRelationship>> *)relationships;
-- (id <FWReligion>)religion;
-- (id <FWPolitics>)politics;
+- (NSString *)religion;
+- (NSString *)politics;
 - (NSSet <id <FWPlace>> *)places;
 
 @end
@@ -61,8 +58,8 @@
 - (void)setProfilePhoto:(UIImage *)profilePhoto;
 - (void)setBio:(NSString *)bio;
 - (void)setBirthday:(id <FWDate>)birthday;
-- (void)setReligion:(id <FWReligion>)religion;
-- (void)setPolitics:(id <FWPolitics>)politics;
+- (void)setReligion:(NSString *)religion;
+- (void)setPolitics:(NSString *)politics;
 
 - (void)setFriends:(NSSet <id <FWUser>> *)friends;
 - (void)addFriend:(id <FWUser>)user;
@@ -84,9 +81,9 @@
 - (void)addFavoriteMusic:(id <FWMusic>)music;
 - (void)removeFavoriteMusic:(id <FWMusic>)music;
 
-- (void)setLikes:(NSSet <id <FWLike>> *)likes;
-- (void)addLike:(id <FWLike>)like;
-- (void)removeLike:(id <FWLike>)like;
+- (void)setLikes:(NSSet <NSString *> *)likes;
+- (void)addLike:(NSString *)topic;
+- (void)removeLike:(NSString *)topic;
 
 - (void)setRelationships:(NSSet <id <FWRelationship>> *)relationships;
 - (void)addRelationship:(id <FWRelationship>)relationship;
