@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="FWUser" representedClassName="FWUser" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="politics" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profilePhoto" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="religion" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="birthday" optional="YES" maxCount="1" deletionRule="Nullify" syncable="YES"/>
+        <relationship name="education" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
+        <relationship name="employment" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
+        <relationship name="favoriteBooks" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
+        <relationship name="favoriteMusic" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
+        <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
+        <relationship name="likes" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
+        <relationship name="places" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
+        <relationship name="relationships" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FWUser" positionX="-63" positionY="-18" width="128" height="255"/>
+    </elements>
 </model>
