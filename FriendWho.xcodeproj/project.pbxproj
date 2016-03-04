@@ -15,6 +15,7 @@
 		7D12CA7D1C84D1770021519B /* AKDebuggerRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA7C1C84D1770021519B /* AKDebuggerRules.m */; };
 		7D12CA811C84D27D0021519B /* AKGenerics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA801C84D27D0021519B /* AKGenerics.m */; };
 		7D12CA861C84E8710021519B /* FWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA851C84E8710021519B /* FWViewController.m */; };
+		7D12CA9F1C8A17860021519B /* FWGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA9E1C8A17860021519B /* FWGame.m */; };
 		7D136AB71C84A69100279D15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB61C84A69100279D15 /* main.m */; };
 		7D136ABA1C84A69100279D15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB91C84A69100279D15 /* AppDelegate.m */; };
 		7D136AC01C84A69100279D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D136ABE1C84A69100279D15 /* Main.storyboard */; };
@@ -70,6 +71,8 @@
 		7D12CA981C8A04990021519B /* FWMusicProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWMusicProtocols.h; sourceTree = "<group>"; };
 		7D12CA9A1C8A059A0021519B /* FWCompanyProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWCompanyProtocols.h; sourceTree = "<group>"; };
 		7D12CA9B1C8A06410021519B /* FWRelationshipProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWRelationshipProtocols.h; sourceTree = "<group>"; };
+		7D12CA9D1C8A17860021519B /* FWGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWGame.h; path = Logic/FWGame.h; sourceTree = "<group>"; };
+		7D12CA9E1C8A17860021519B /* FWGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FWGame.m; path = Logic/FWGame.m; sourceTree = "<group>"; };
 		7D12CAA01C8A1EE90021519B /* FWLikeProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWLikeProtocols.h; sourceTree = "<group>"; };
 		7D136AB21C84A69100279D15 /* FriendWho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendWho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D136AB61C84A69100279D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -231,6 +234,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		7D12CA9C1C8A17630021519B /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				7D12CA9D1C8A17860021519B /* FWGame.h */,
+				7D12CA9E1C8A17860021519B /* FWGame.m */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
 		7D136AA91C84A69100279D15 = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +330,7 @@
 		7D136AED1C84A7DA00279D15 /* Data Managers */ = {
 			isa = PBXGroup;
 			children = (
+				7D12CA9C1C8A17630021519B /* Logic */,
 				7D12CA8C1C89EDD20021519B /* Protocols */,
 				7D136AEC1C84A7CE00279D15 /* Core Data */,
 				7D12CA711C84CD4D0021519B /* FWFacebookManager */,
@@ -592,6 +605,7 @@
 				7D136ABA1C84A69100279D15 /* AppDelegate.m in Sources */,
 				7D136AF01C84A89100279D15 /* FWPrivateInfo.m in Sources */,
 				7D12CA791C84D15C0021519B /* AKDebugger.m in Sources */,
+				7D12CA9F1C8A17860021519B /* FWGame.m in Sources */,
 				7D136AB71C84A69100279D15 /* main.m in Sources */,
 				7D12CA761C84CDB60021519B /* NSObject+Basics.m in Sources */,
 				7D12CA701C84CD480021519B /* FWFacebookManager.m in Sources */,
