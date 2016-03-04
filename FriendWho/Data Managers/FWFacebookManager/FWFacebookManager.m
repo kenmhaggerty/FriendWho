@@ -56,7 +56,38 @@ NSString * const FacebookAPIUserKeyName = @"name";
 
 #pragma mark - // INITS AND LOADS //
 
-#pragma mark - // PUBLIC METHODS //
+- (void)dealloc {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_ACCOUNTS] message:nil];
+    
+    [self teardown];
+}
+
+- (id)init {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_ACCOUNTS] message:nil];
+    
+    self = [super init];
+    if (self) {
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (void)awakeFromNib {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_ACCOUNTS] message:nil];
+    
+    [super awakeFromNib];
+    
+    [self setup];
+}
+
+#pragma mark - // PUBLIC METHODS (Setup) //
+
++ (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_FACEBOOK] message:nil];
+    
+    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+}
 
 + (void)applicationDidBecomeActive {
     [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_FACEBOOK] message:nil];
@@ -64,17 +95,14 @@ NSString * const FacebookAPIUserKeyName = @"name";
     [FBSDKAppEvents activateApp];
 }
 
-+ (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_FACEBOOK] message:nil];
-    
-//    [FBSDKSettings setAppID:FacebookAPIAppID_QA];
-    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-}
-
 + (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_FACEBOOK] message:nil];
     
     return [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+    
+//    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+}
+
 }
 
 #pragma mark - // CATEGORY METHODS //
@@ -83,6 +111,17 @@ NSString * const FacebookAPIUserKeyName = @"name";
 
 #pragma mark - // OVERWRITTEN METHODS //
 
-#pragma mark - // PRIVATE METHODS //
+- (void)setup {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_DATA, AKD_ACCOUNTS] message:nil];
+    
+    [super setup];
+}
+
+- (void)teardown {
+    [AKDebugger logMethod:METHOD_NAME logType:AKLogTypeMethodName methodType:AKMethodTypeSetup tags:@[AKD_DATA, AKD_ACCOUNTS] message:nil];
+    
+    [super teardown];
+}
+
 
 @end

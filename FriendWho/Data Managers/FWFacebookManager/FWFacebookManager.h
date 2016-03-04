@@ -12,6 +12,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "NSObject+Basics.h"
 
 #pragma mark - // PROTOCOLS //
 
@@ -48,7 +49,11 @@ extern NSString * const FacebookAPIUserKeyID;
 extern NSString * const FacebookAPIUserKeyName;
 
 @interface FWFacebookManager : NSObject
+
+// SETUP //
+
 + (void)applicationDidBecomeActive;
 + (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 + (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
+
 @end
