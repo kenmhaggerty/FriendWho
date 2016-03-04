@@ -18,6 +18,7 @@
 #import "FWEmploymentProtocols.h"
 #import "FWBookProtocols.h"
 #import "FWMusicProtocols.h"
+#import "FWLikeProtocols.h"
 #import "FWRelationshipProtocols.h"
 #import "FWReligionProtocols.h"
 #import "FWPoliticsProtocols.h"
@@ -38,7 +39,7 @@
 - (NSSet <id <FWEmployment>> *)employment;
 - (NSSet <id <FWBook>> *)favoriteBooks;
 - (NSSet <id <FWMusic>> *)favoriteMusic;
-- (NSSet *)likes;
+- (NSSet <id <FWLike>> *)likes;
 - (NSSet <id <FWRelationship>> *)relationships;
 - (id <FWReligion>)religion;
 - (id <FWPolitics>)politics;
@@ -65,7 +66,7 @@
 - (void)setEmployment:(NSSet <id <FWEmployment>> *)employment;
 - (void)setFavoriteBooks:(NSSet <id <FWBook>> *)favoriteBooks;
 - (void)setFavoriteMusic:(NSSet <id <FWMusic>> *)favoriteMusic;
-- (void)setLikes:(NSSet *)likes;
+- (void)setLikes:(NSSet <id <FWLike>> *)likes;
 - (void)setRelationships:(NSSet <id <FWRelationship>> *)relationships;
 - (void)setReligion:(id <FWReligion>)religion;
 - (void)setPolitics:(id <FWPolitics>)politics;
