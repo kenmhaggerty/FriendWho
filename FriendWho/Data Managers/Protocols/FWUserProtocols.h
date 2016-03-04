@@ -61,15 +61,39 @@
 - (void)setProfilePhoto:(UIImage *)profilePhoto;
 - (void)setBio:(NSString *)bio;
 - (void)setBirthday:(id <FWDate>)birthday;
-- (void)setFriends:(NSSet <id <FWUser>> *)friends;
-- (void)setEducation:(NSSet <id <FWEnrollment>> *)education;
-- (void)setEmployment:(NSSet <id <FWEmployment>> *)employment;
-- (void)setFavoriteBooks:(NSSet <id <FWBook>> *)favoriteBooks;
-- (void)setFavoriteMusic:(NSSet <id <FWMusic>> *)favoriteMusic;
-- (void)setLikes:(NSSet <id <FWLike>> *)likes;
-- (void)setRelationships:(NSSet <id <FWRelationship>> *)relationships;
 - (void)setReligion:(id <FWReligion>)religion;
 - (void)setPolitics:(id <FWPolitics>)politics;
+
+- (void)setFriends:(NSSet <id <FWUser>> *)friends;
+- (void)addFriend:(id <FWUser>)user;
+- (void)removeFriend:(id <FWUser>)user;
+
+- (void)setEducation:(NSSet <id <FWEnrollment>> *)education;
+- (void)addEducation:(id <FWEnrollment>)enrollment;
+- (void)removeEducation:(id <FWEnrollment>)enrollment;
+
+- (void)setEmployment:(NSSet <id <FWEmployment>> *)employment;
+- (void)addEmployment:(id <FWEmployment>)employment;
+- (void)removeEmployment:(id <FWEmployment>)employment;
+
+- (void)setFavoriteBooks:(NSSet <id <FWBook>> *)favoriteBooks;
+- (void)addFavoriteBook:(id <FWBook>)book;
+- (void)removeFavoriteBook:(id <FWBook>)book;
+
+- (void)setFavoriteMusic:(NSSet <id <FWMusic>> *)favoriteMusic;
+- (void)addFavoriteMusic:(id <FWMusic>)music;
+- (void)removeFavoriteMusic:(id <FWMusic>)music;
+
+- (void)setLikes:(NSSet <id <FWLike>> *)likes;
+- (void)addLike:(id <FWLike>)like;
+- (void)removeLike:(id <FWLike>)like;
+
+- (void)setRelationships:(NSSet <id <FWRelationship>> *)relationships;
+- (void)addRelationship:(id <FWRelationship>)relationship;
+- (void)removeRelationship:(id <FWRelationship>)relationship;
+
 - (void)setPlaces:(NSSet <id <FWPlace>> *)places;
+- (void)addPlace:(id <FWPlace>)place;
+- (void)removePlace:(id <FWPlace>)place;
 
 @end
