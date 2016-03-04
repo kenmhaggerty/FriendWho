@@ -11,23 +11,19 @@
 #pragma mark - // IMPORTS //
 
 #import <Foundation/Foundation.h>
+#import "FWDurationProtocols.h"
 
-#import "FWDateProtocols.h"
-#import "FWSchoolProtocols.h"
-#import "FWSubjectProtocols.h"
+#import "FWPlaceProtocols.h"
 
 #pragma mark - // DEFINITIONS //
 
 #pragma mark - // PROTOCOL (FWEnrollment) //
 
-@protocol FWEnrollment <NSObject>
+@protocol FWEnrollment <FWDuration>
 
-- (id <FWDate>)startDate;
-- (id <FWDate>)endDate;
-- (NSNumber *)durationInYears;
-- (id <FWSchool>)school;
-- (NSSet <id <FWSubject>> *)majors;
-- (NSSet <id <FWSubject>> *)minors;
+- (id <FWPlace>)school;
+- (NSSet <NSString *> *)majors;
+- (NSSet <NSString *> *)minors;
 
 @end
 
@@ -37,16 +33,16 @@
 
 // INITIALIZERS //
 
-- (id)initWithSchool:(id <FWSchool>)school startDate:(id <FWDate>)startDate endDate:(id <FWDate>)endDate;
+- (id)initWithSchool:(id <FWPlace>)school startDate:(id <FWDate>)startDate endDate:(id <FWDate>)endDate;
 
 // SETTERS //
 
-- (void)setMajors:(NSSet <id <FWSubject>> *)majors;
-- (void)addMajor:(id <FWSubject>)subject;
-- (void)removeMajor:(id <FWSubject>)subject;
+- (void)setMajors:(NSSet <NSString *> *)majors;
+- (void)addMajor:(NSString *)subject;
+- (void)removeMajor:(NSString *)subject;
 
-- (void)setMinors:(NSSet <id <FWSubject>> *)minors;
-- (void)addMinor:(id <FWSubject>)subject;
-- (void)removeMinor:(id <FWSubject>)subject;
+- (void)setMinors:(NSSet <NSString *> *)minors;
+- (void)addMinor:(NSString *)subject;
+- (void)removeMinor:(NSString *)subject;
 
 @end
