@@ -65,6 +65,7 @@
 		7D12CA911C89FAF30021519B /* FWEnrollmentProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWEnrollmentProtocols.h; path = Protocols/FWEnrollmentProtocols.h; sourceTree = "<group>"; };
 		7D12CA971C8A04250021519B /* FWBookProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWBookProtocols.h; sourceTree = "<group>"; };
 		7D12CA981C8A04990021519B /* FWMusicProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWMusicProtocols.h; sourceTree = "<group>"; };
+		7D12CA9A1C8A059A0021519B /* FWCompanyProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWCompanyProtocols.h; sourceTree = "<group>"; };
 		7D136AB21C84A69100279D15 /* FriendWho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendWho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D136AB61C84A69100279D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D136AB81C84A69100279D15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 				7D12CA8D1C89EE0D0021519B /* FWUserProtocols.h */,
 				7D12CA901C89F6930021519B /* FWDateProtocols.h */,
 				7D12CA911C89FAF30021519B /* FWEnrollmentProtocols.h */,
+				7D12CA9A1C8A059A0021519B /* FWCompanyProtocols.h */,
 				7D12CA971C8A04250021519B /* FWBookProtocols.h */,
 				7D12CA981C8A04990021519B /* FWMusicProtocols.h */,
 				7D12CA8F1C89F41E0021519B /* FWPlaceProtocols.h */,
