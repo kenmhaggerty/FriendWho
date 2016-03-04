@@ -17,6 +17,36 @@
 
 #pragma mark - // DEFINITIONS (Private) //
 
+NSString * const FacebookAPIPermissionPublicProfile = @"public_profile";
+NSString * const FacebookAPIPermissionFriends = @"user_friends";
+NSString * const FacebookAPIPermissionEmail = @"email";
+NSString * const FacebookAPIPermissionAboutMe = @"user_about_me";
+NSString * const FacebookAPIPermissionBooks = @"user_actions.books";
+NSString * const FacebookAPIPermissionFitness = @"user_actions.fitness";
+NSString * const FacebookAPIPermissionMusic = @"user_actions.music";
+NSString * const FacebookAPIPermissionNews = @"user_actions.news";
+NSString * const FacebookAPIPermissionWatchedVideos = @"user_actions.video";
+NSString * const FacebookAPIPermissionBirthday = @"user_birthday";
+NSString * const FacebookAPIPermissionEducation = @"user_education_history";
+NSString * const FacebookAPIPermissionEvents = @"user_events";
+NSString * const FacebookAPIPermissionGamesActivity = @"user_games_activity";
+NSString * const FacebookAPIPermissionHometown = @"user_hometown";
+NSString * const FacebookAPIPermissionLikes = @"user_likes";
+NSString * const FacebookAPIPermissionLocation = @"user_location";
+NSString * const FacebookAPIPermissionManagedGroups = @"user_managed_groups";
+NSString * const FacebookAPIPermissionPhotos = @"user_photos";
+NSString * const FacebookAPIPermissionPosts = @"user_posts";
+NSString * const FacebookAPIPermissionRelationships = @"user_relationships";
+NSString * const FacebookAPIPermissionRelationshipDetails = @"user_relationship_details";
+NSString * const FacebookAPIPermissionReligionAndPolitics = @"user_religion_politics";
+NSString * const FacebookAPIPermissionTaggedPlaces = @"user_tagged_places";
+NSString * const FacebookAPIPermissionVideos = @"user_videos";
+NSString * const FacebookAPIPermissionWebsite = @"user_website";
+NSString * const FacebookAPIPermissionEmployment = @"user_work_history";
+
+NSString * const FacebookAPIUserKeyID = @"id";
+NSString * const FacebookAPIUserKeyName = @"name";
+
 @interface FWFacebookManager ()
 @end
 
