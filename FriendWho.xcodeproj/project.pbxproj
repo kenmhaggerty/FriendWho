@@ -214,7 +214,7 @@
 				7D12CA971C8A04250021519B /* FWBookProtocols.h */,
 				7D12CA8F1C89F41E0021519B /* FWPlaceProtocols.h */,
 			);
-			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		7D136AA91C84A69100279D15 = {
