@@ -14,6 +14,7 @@
 		7D12CA791C84D15C0021519B /* AKDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA781C84D15C0021519B /* AKDebugger.m */; };
 		7D12CA7D1C84D1770021519B /* AKDebuggerRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA7C1C84D1770021519B /* AKDebuggerRules.m */; };
 		7D12CA811C84D27D0021519B /* AKGenerics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA801C84D27D0021519B /* AKGenerics.m */; };
+		7D12CA861C84E8710021519B /* FWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA851C84E8710021519B /* FWViewController.m */; };
 		7D136AB71C84A69100279D15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB61C84A69100279D15 /* main.m */; };
 		7D136ABA1C84A69100279D15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB91C84A69100279D15 /* AppDelegate.m */; };
 		7D136AC01C84A69100279D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D136ABE1C84A69100279D15 /* Main.storyboard */; };
@@ -56,6 +57,8 @@
 		7D12CA7C1C84D1770021519B /* AKDebuggerRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKDebuggerRules.m; sourceTree = "<group>"; };
 		7D12CA7F1C84D27D0021519B /* AKGenerics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKGenerics.h; path = ../../../../Documents/PROGRAMMING/iOS/1_PROJECTS/AKGenerics/AKGenerics.h; sourceTree = "<group>"; };
 		7D12CA801C84D27D0021519B /* AKGenerics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKGenerics.m; path = ../../../../Documents/PROGRAMMING/iOS/1_PROJECTS/AKGenerics/AKGenerics.m; sourceTree = "<group>"; };
+		7D12CA841C84E8710021519B /* FWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWViewController.h; sourceTree = "<group>"; };
+		7D12CA851C84E8710021519B /* FWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWViewController.m; sourceTree = "<group>"; };
 		7D136AB21C84A69100279D15 /* FriendWho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendWho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D136AB61C84A69100279D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D136AB81C84A69100279D15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -188,6 +191,15 @@
 			name = AKGenerics;
 			sourceTree = "<group>";
 		};
+		7D12CA831C84E83F0021519B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D12CA841C84E8710021519B /* FWViewController.h */,
+				7D12CA851C84E8710021519B /* FWViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		7D136AA91C84A69100279D15 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +233,7 @@
 				7D136AEF1C84A89100279D15 /* FWPrivateInfo.m */,
 				7D136AC41C84A69100279D15 /* Assets.xcassets */,
 				7D136AEB1C84A7BC00279D15 /* Storyboards */,
+				7D12CA831C84E83F0021519B /* View Controllers */,
 				7D136AED1C84A7DA00279D15 /* Data Managers */,
 				7D136AB51C84A69100279D15 /* Supporting Files */,
 			);
@@ -550,6 +563,7 @@
 				7D136AB71C84A69100279D15 /* main.m in Sources */,
 				7D12CA761C84CDB60021519B /* NSObject+Basics.m in Sources */,
 				7D12CA701C84CD480021519B /* FWFacebookManager.m in Sources */,
+				7D12CA861C84E8710021519B /* FWViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
