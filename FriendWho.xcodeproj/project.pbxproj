@@ -60,6 +60,7 @@
 		7D12CA841C84E8710021519B /* FWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWViewController.h; sourceTree = "<group>"; };
 		7D12CA851C84E8710021519B /* FWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWViewController.m; sourceTree = "<group>"; };
 		7D12CA8D1C89EE0D0021519B /* FWUserProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWUserProtocols.h; sourceTree = "<group>"; };
+		7D12CA8E1C89EF980021519B /* FWQuestionProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWQuestionProtocols.h; sourceTree = "<group>"; };
 		7D12CA8F1C89F41E0021519B /* FWPlaceProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWPlaceProtocols.h; sourceTree = "<group>"; };
 		7D12CA901C89F6930021519B /* FWDateProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWDateProtocols.h; sourceTree = "<group>"; };
 		7D12CA911C89FAF30021519B /* FWEnrollmentProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWEnrollmentProtocols.h; sourceTree = "<group>"; };
@@ -223,6 +224,7 @@
 				7D12CA981C8A04990021519B /* FWMusicProtocols.h */,
 				7D12CA9B1C8A06410021519B /* FWRelationshipProtocols.h */,
 				7D12CA8F1C89F41E0021519B /* FWPlaceProtocols.h */,
+				7D12CA8E1C89EF980021519B /* FWQuestionProtocols.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
