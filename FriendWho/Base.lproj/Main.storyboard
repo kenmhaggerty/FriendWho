@@ -3,12 +3,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FWViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +19,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s94-bT-PN4">
+                                <rect key="frame" x="279" y="316" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DP-OZ-3bK" customClass="FBSDKProfilePictureView">
+                                <rect key="frame" x="168" y="36" width="264" height="264"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0DP-OZ-3bK" secondAttribute="height" multiplier="1:1" id="50R-nr-SSq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1g2-Ao-ceI" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="168" y="534" width="264" height="50"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="50" id="1h6-TX-f7I"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fu8-fd-P3L"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPL-U0-up5">
+                                <rect key="frame" x="285" y="345" width="30" height="30"/>
+                                <state key="normal" title="Info"/>
+                                <connections>
+                                    <action selector="info:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dTH-yF-6tu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="1g2-Ao-ceI" secondAttribute="bottom" constant="16" id="3na-yR-7GB"/>
+                            <constraint firstItem="0DP-OZ-3bK" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6b5-Cc-Ry2"/>
+                            <constraint firstItem="0DP-OZ-3bK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="8BU-3n-MCZ"/>
+                            <constraint firstItem="1g2-Ao-ceI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EA4-he-kfu"/>
+                            <constraint firstItem="0DP-OZ-3bK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="750" constant="16" id="GFn-9b-kTk"/>
+                            <constraint firstItem="1g2-Ao-ceI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="s94-bT-PN4" secondAttribute="bottom" id="Lbo-Ou-MmB"/>
+                            <constraint firstItem="0DP-OZ-3bK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N3c-0W-gpD"/>
+                            <constraint firstItem="iPL-U0-up5" firstAttribute="top" secondItem="s94-bT-PN4" secondAttribute="bottom" constant="8" id="Vgq-g3-GQH"/>
+                            <constraint firstItem="s94-bT-PN4" firstAttribute="top" secondItem="0DP-OZ-3bK" secondAttribute="bottom" constant="16" id="aF3-de-uXo"/>
+                            <constraint firstItem="s94-bT-PN4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e4W-A6-ZTd"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="0DP-OZ-3bK" secondAttribute="trailing" id="fBO-lV-mbU"/>
+                            <constraint firstItem="0DP-OZ-3bK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fgJ-BC-cdL"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="1g2-Ao-ceI" secondAttribute="trailing" id="jRP-af-inJ"/>
+                            <constraint firstItem="s94-bT-PN4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uDb-6x-Rry"/>
+                            <constraint firstItem="1g2-Ao-ceI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iPL-U0-up5" secondAttribute="bottom" id="uJV-nU-MeK"/>
+                            <constraint firstItem="1g2-Ao-ceI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uQM-h7-6nV"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="s94-bT-PN4" secondAttribute="trailing" id="vTK-Vu-4Hh"/>
+                            <constraint firstItem="iPL-U0-up5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xot-aN-Krg"/>
+                            <constraint firstItem="1g2-Ao-ceI" firstAttribute="width" secondItem="0DP-OZ-3bK" secondAttribute="width" priority="750" id="zft-eb-I7S"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="1g2-Ao-ceI" id="hw1-pQ-VUd"/>
+                        <outlet property="nameLabel" destination="s94-bT-PN4" id="I55-Wb-2gb"/>
+                        <outlet property="profilePictureView" destination="0DP-OZ-3bK" id="vQe-zm-ZdM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
