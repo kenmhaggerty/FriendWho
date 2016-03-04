@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "FWBirthdayProtocols.h"
+#import "FWDateProtocols.h"
 #import "FWEnrollmentProtocols.h"
 #import "FWEmploymentProtocols.h"
 #import "FWBookProtocols.h"

@@ -1,5 +1,5 @@
 //
-//  FWBirthdayProtocols.h
+//  FWDateProtocols.h
 //  FriendWho
 //
 //  Created by Ken M. Haggerty on 3/4/16.
@@ -54,15 +54,32 @@ typedef enum : NSUInteger {
     Pig = 11
 } FWZodiacYear;
 
-#pragma mark - // PROTOCOL (FWBirthday) //
+#pragma mark - // PROTOCOL (FWDate) //
 
-@protocol FWBirthday <NSObject>
+@protocol FWDate <NSObject>
 
 - (NSDate *)date;
 - (NSNumber *)day;
 - (NSNumber *)month;
 - (NSNumber *)year;
 - (FWDay)dayOfWeek;
+
+@end
+
+#pragma mark - // PROTOCOL (FWDate_PRIVATE) //
+
+@protocol FWDate_PRIVATE <FWDate>
+
+// INITIALIZERS //
+
+- (id)initWithDay:(NSNumber *)day month:(NSNumber *)month year:(NSNumber *)year;
+
+@end
+
+#pragma mark - // PROTOCOL (FWBirthday) //
+
+@protocol FWBirthday <FWDate>
+
 - (NSNumber *)age;
 - (FWZodiacSign)zodiacSign;
 - (FWZodiacYear)zodiacYear;
@@ -71,10 +88,8 @@ typedef enum : NSUInteger {
 
 #pragma mark - // PROTOCOL (FWBirthday_PRIVATE) //
 
-@protocol FWBirthday_PRIVATE <FWBirthday>
+@protocol FWBirthday_PRIVATE <FWBirthday, FWDate_PRIVATE>
 
-// INITIALIZERS //
-
-- (id)initWithDay:(NSNumber *)day month:(NSNumber *)month year:(NSNumber *)year;
+// no additional methods
 
 @end
