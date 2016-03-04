@@ -16,6 +16,8 @@
 		7D12CA811C84D27D0021519B /* AKGenerics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA801C84D27D0021519B /* AKGenerics.m */; };
 		7D12CA861C84E8710021519B /* FWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA851C84E8710021519B /* FWViewController.m */; };
 		7D12CA9F1C8A17860021519B /* FWGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CA9E1C8A17860021519B /* FWGame.m */; };
+		7D12CAAC1C8A20210021519B /* FWUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CAA91C8A20210021519B /* FWUser+CoreDataProperties.m */; };
+		7D12CAAD1C8A20210021519B /* FWUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D12CAAB1C8A20210021519B /* FWUser.m */; };
 		7D136AB71C84A69100279D15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB61C84A69100279D15 /* main.m */; };
 		7D136ABA1C84A69100279D15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D136AB91C84A69100279D15 /* AppDelegate.m */; };
 		7D136AC01C84A69100279D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D136ABE1C84A69100279D15 /* Main.storyboard */; };
@@ -73,6 +75,10 @@
 		7D12CA9D1C8A17860021519B /* FWGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWGame.h; path = Logic/FWGame.h; sourceTree = "<group>"; };
 		7D12CA9E1C8A17860021519B /* FWGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FWGame.m; path = Logic/FWGame.m; sourceTree = "<group>"; };
 		7D12CAA01C8A1EE90021519B /* FWLikeProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWLikeProtocols.h; sourceTree = "<group>"; };
+		7D12CAA81C8A20210021519B /* FWUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FWUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7D12CAA91C8A20210021519B /* FWUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FWUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7D12CAAA1C8A20210021519B /* FWUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWUser.h; sourceTree = "<group>"; };
+		7D12CAAB1C8A20210021519B /* FWUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWUser.m; sourceTree = "<group>"; };
 		7D136AB21C84A69100279D15 /* FriendWho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendWho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D136AB61C84A69100279D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D136AB81C84A69100279D15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -242,6 +248,17 @@
 			name = Logic;
 			sourceTree = "<group>";
 		};
+		7D12CAA71C8A1FBA0021519B /* FWUser */ = {
+			isa = PBXGroup;
+			children = (
+				7D12CAAA1C8A20210021519B /* FWUser.h */,
+				7D12CAAB1C8A20210021519B /* FWUser.m */,
+				7D12CAA81C8A20210021519B /* FWUser+CoreDataProperties.h */,
+				7D12CAA91C8A20210021519B /* FWUser+CoreDataProperties.m */,
+			);
+			name = FWUser;
+			sourceTree = "<group>";
+		};
 		7D136AA91C84A69100279D15 = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				7D136AC11C84A69100279D15 /* FriendWho.xcdatamodeld */,
+				7D12CAA71C8A1FBA0021519B /* FWUser */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -606,8 +624,10 @@
 				7D12CA9F1C8A17860021519B /* FWGame.m in Sources */,
 				7D136AB71C84A69100279D15 /* main.m in Sources */,
 				7D12CA761C84CDB60021519B /* NSObject+Basics.m in Sources */,
+				7D12CAAC1C8A20210021519B /* FWUser+CoreDataProperties.m in Sources */,
 				7D12CA701C84CD480021519B /* FWFacebookManager.m in Sources */,
 				7D12CA861C84E8710021519B /* FWViewController.m in Sources */,
+				7D12CAAD1C8A20210021519B /* FWUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
