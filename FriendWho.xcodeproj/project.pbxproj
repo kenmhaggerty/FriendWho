@@ -59,10 +59,10 @@
 		7D12CA801C84D27D0021519B /* AKGenerics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKGenerics.m; path = ../../../../Documents/PROGRAMMING/iOS/1_PROJECTS/AKGenerics/AKGenerics.m; sourceTree = "<group>"; };
 		7D12CA841C84E8710021519B /* FWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWViewController.h; sourceTree = "<group>"; };
 		7D12CA851C84E8710021519B /* FWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWViewController.m; sourceTree = "<group>"; };
-		7D12CA8D1C89EE0D0021519B /* FWUserProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWUserProtocols.h; path = Protocols/FWUserProtocols.h; sourceTree = "<group>"; };
-		7D12CA8F1C89F41E0021519B /* FWPlaceProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWPlaceProtocols.h; path = Protocols/FWPlaceProtocols.h; sourceTree = "<group>"; };
-		7D12CA901C89F6930021519B /* FWDateProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWDateProtocols.h; path = Protocols/FWDateProtocols.h; sourceTree = "<group>"; };
-		7D12CA911C89FAF30021519B /* FWEnrollmentProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWEnrollmentProtocols.h; path = Protocols/FWEnrollmentProtocols.h; sourceTree = "<group>"; };
+		7D12CA8D1C89EE0D0021519B /* FWUserProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWUserProtocols.h; sourceTree = "<group>"; };
+		7D12CA8F1C89F41E0021519B /* FWPlaceProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWPlaceProtocols.h; sourceTree = "<group>"; };
+		7D12CA901C89F6930021519B /* FWDateProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWDateProtocols.h; sourceTree = "<group>"; };
+		7D12CA911C89FAF30021519B /* FWEnrollmentProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWEnrollmentProtocols.h; sourceTree = "<group>"; };
 		7D12CA951C8A02860021519B /* FWEmploymentProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWEmploymentProtocols.h; sourceTree = "<group>"; };
 		7D12CA961C8A03080021519B /* FWDurationProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWDurationProtocols.h; sourceTree = "<group>"; };
 		7D12CA971C8A04250021519B /* FWBookProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWBookProtocols.h; sourceTree = "<group>"; };
